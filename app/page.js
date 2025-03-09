@@ -9,6 +9,7 @@ export default function Home() {
           <p style={{color: "#e3dbd4"}}>A quick coding challenge put together for a bit of fun</p>
       <div className={styles.component__container}>
           <Flip initialText={"Make your site:"} textArray={["Pretty","Reactive","Fun", "User Friendly", "Smart"]} />
+
       </div>
       </main>
     </div>
