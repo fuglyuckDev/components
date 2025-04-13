@@ -1,0 +1,96 @@
+
+.container {
+
+}
+
+.button {
+  background-color: #DC5718;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 15px 30px;
+  font-size: 1rem;
+}
+
+.close__button {
+  background-color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  align-self: flex-end;
+}
+
+.modal__container {
+  width: fit-content;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  animation: popIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.inner__container {
+  z-index: 0;
+}
+
+.card__container__back {
+  position: relative;
+  background-color: #DC5718;
+  transform: scale(0.85) translateY(140px);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.card__container__back > * {
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card__container__front {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: relative;
+  background-color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.inner__container:hover {
+  .card__container__back {
+    transform: scale(0.95) translateY(0px);
+  }
+  .card__container__back > * {
+    opacity: 1;
+  }
+}
+
+.controls__container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.card__container__back, .card__container__front {
+  color: white;
+  border-radius: 10px;
+  width: 400px;
+  height: 150px;
+  z-index: 1;
+  padding: 20px;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: translateY(200px) scale(0.6);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}

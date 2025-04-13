@@ -36,7 +36,7 @@ const MovingCell = ({cells}) => {
         <div className={styles.container}>
             <div id={"cell-wrapper"} className={styles.cell__wrapper} style={{transform: `translateX(${transformData}px)`}} ><div style={{width: `${cellData?.cellRect?.width}px`, height: `${cellData?.cellRect?.height}px` }} className={styles.cell__inner}/></div>
             {cells.map((cell, idx) => (
-                <p key={idx} id={`${idx}`} onClick={(e)=>setSelectedCellIndex(idx)}>{cell}</p>
+                <p className={styles.item} key={idx} id={`${idx}`} onClick={(e)=>setSelectedCellIndex(idx)}>{cell}</p>
             ))}
         </div>
     );
